@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+			width: 150px;
+			height: 150px;
+			background-color: lightgreen;
+			margin: 5px;
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+		}
+
+	</style>
+	<script type="text/javascript">
+		
+		// oncontentmenu='return false'
+		function saludar() {
+			var form = document.getElementById('formulario');
+			form.style.backgroundColor='black';
+		}
+		function saludar2() {
+			var form = document.getElementById('formulario');
+			form.style.backgroundColor='green';
+		}
+		function cambiaColor() {
+			var div1 = document.getElementById('div1');
+			div1.style.backgroundColor='blue';
+			var div2 = document.getElementById('div2');
+			div2.style.backgroundColor='green';
+			var div3 = document.getElementById('div3');
+			div3.style.backgroundColor='black';
+		}
+
+		function onclickf() {
+			var div1 = document.getElementById('div1');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div1.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',0.7)';
+			div1.style.borderColor = 'rgba(256,256,256,0.1)';
+			div1.style.borderWidth = '0px';
+		}
+
+		function ondblclickf() {
+			var div1 = document.getElementById('div1');
+			//div1.style.backgroundColor = 'rgba(0,0,0,1)';
+			//div1.style.borderColor = 'red';
+			document.getElementById('div1').style.borderColor = 'red';
+			div1.style.border = 'solid';
+			div1.style.borderWidth = '5px';
+		}
+		function onmouseoverf() {
+			var div2 = document.getElementById('div2');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div2.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',0.3)';
+		}
+		function onmouseoutf() {
+			var div2 = document.getElementById('div2');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div2.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',1)';
+		}
+		function onmousedownf() {
+			var div3 = document.getElementById('div3');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div3.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',0.3)';
+			
+		}
+		function onmouseupf() {
+			var div3 = document.getElementById('div3');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div3.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',1)';
+			
+		}
+		function onmouseenterf() {
+			var div4 = document.getElementById('div4');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div4.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',0.3)';
+			//alert('onmouseenterf')
+		}
+		function onmouseleavef() {
+			var div4 = document.getElementById('div4');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div4.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',1)';
+			//alert('onmouseleavef')
+		}
+		function onmousemovef() {
+			var div5 = document.getElementById('div5');
+			var num1=parseInt(Math.random() * (256 - 0) + 1);
+			var num2=parseInt(Math.random() * (256 - 0) + 1);
+			var num3=parseInt(Math.random() * (256 - 0) + 1);
+			//div1.style.backgroundColor = 'rgba(218,191,255,0.7)';
+			div5.style.backgroundColor = 'rgba(' + num1 + ',' + num2 + ',' + num3 + ',0.3)';
+			document.getElementById('div5').value = num1;
+			//alert('onmousemovef')
+		}
+		function oncontextmenuf() {
+			//alert('oncontextmenuf')
+		}
+
+	</script>
+</head>
+<body>
+	<form name="formulario" id="formulario">
+		<input type="text" name="" id="input1" onblur="saludar()">
+		<input type="text" name="" id="input2" onfocus="saludar2()">
+	</form>
+	<br><br>
+	<div id="div1" onclick="onclickf()" ondblclick="ondblclickf()">onclick & ondblclick</div>
+	<div id="div2" onmouseover="onmouseoverf()" onmouseout="onmouseoutf()">onmouseover & onmouseout</div>
+	<div id="div3" onmousedown="onmousedownf()" onmouseup="onmouseupf()">onmousedown & onmouseup</div>
+	<div id="div4" onmouseenter="onmouseenterf()" onmouseleave="onmouseleavef()">onmouseenter & onmouseleave</div>
+	<div id="div5" onmousemove="onmousemovef()">onmousemove</div>
+	<div id="div6" oncontextmenu="oncontextmenuf()">oncontextmenu</div>
+</body>
+</html>
